@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Pathfinder</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+
+    <body>
+        <div id="divparams">
+            <button id="exitparams">X</button>
+            <div class="conteneur">
+                <div class="titre">
+                    <p>Paramètres</p>
+                </div>
+                <div class="allparams">
+                    <p>Chemin automatique : <input type="checkbox" id="cheminAutomatique" checked></p>
+                    <p>Algorithme de pathfinding : <span style="color: lime">◼</span></p>
+                    <p>Ajouter des "murs" : <span style="color: lime">◼</span></p>
+                    <p>Animation des cellules : <input type="checkbox" id="activeAnim" checked></p>
+                    <p id="tempsAnimCells">Temps d'animation des cellules : <input type="number" min="0.1" value=8 class="surface_input" id="msConfig"> millisecondes</p>
+                    <p>Surface maximum du tableau<span style="color:crimson"><b>*</b></span> :<br class="mobilebr"> <input type="number" min="2" value=20 class="surface_input" id="hauteur"> x <span id="largeur">20</span> = <span id="surface">400</span> cases</p>
+                    <p>Effacer les logs console : <button id="logClear">Effacer</button></p><br>
+                    <span class="dev"><b>Les paramètres avec ce symbole " <span style="font-size: initial; color: lime">◼</span> " sont en cours de développement.</b></span><br>
+                    <span class="attention"><b>Les paramètres avec ce symbole " <span style="font-size: initial;">*</span> " peuvent engendrer des problèmes !</b></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="toolsbar" class="toolsbar">
+            <input type="number" id="tableSurface" value="5" />
+            <button class="button" id="createTable">Créer</button>
+            <span id="tableauCreated"></span>
+            <button class="params" id="params"></button>
+        </div>
+
+        <div id="divContent"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

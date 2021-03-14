@@ -1,0 +1,192 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #323232;
+    font-family: Arial, sans-serif;
+}
+
+.toolsbar {
+    height: 60px;
+    width: calc(100% - 40px);
+    background-color: #1f1f1f;
+    padding: 0 20px 0 20px;
+    line-height: 60px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+#tableSurface {
+    height: 30px;
+    width: 60px;
+    border: 0;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.button {
+    height: 30px;
+    width: 120px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.button:hover{
+    transform: scale(1.05,1.05);
+    background-color: violet;
+}
+
+.params{
+    height: 30px;
+    width: 30px;
+    border: 0;
+    cursor: pointer;
+    background-image: url("engrenage-illustrator.png");
+    background-size: 27px 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    transition: 0.5s;
+}
+
+.params:hover{
+    background-image: url("engrenage-couleur-illustrator.png");
+}
+
+#divparams{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#exitparams{
+    height: 50px;
+    width: 50px;
+    margin: 10px 0 0 10px;
+    border: 0;
+    cursor: pointer;
+    color: crimson;
+    font-size: 18px;
+    transition: 0.25s;
+}
+
+#exitparams:hover{
+    color: white;
+    background-color: crimson;
+}
+
+.conteneur{
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.titre{
+    width: 100%;
+    height: 60px;
+    border-bottom: solid black 2px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 60px;
+    color: white;
+    background: linear-gradient(45deg, crimson, orange);
+    text-shadow: 1px 1px 2px black;
+}
+
+.allparams{
+    text-align: left;
+    margin: 20px 0 0 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.surface_input{
+    width: 50px;
+    text-align: center;
+}
+
+.surface_input_non_dispo{
+    pointer-events:none;
+}
+
+.attention{
+    font-size: 12px;
+    color: crimson
+}
+
+.dev{
+    font-size: 12px;
+}
+
+#divContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    height: calc(100vh - 60px - 40px);
+}
+
+#table{
+    margin: auto;
+    white-space: nowrap;
+}
+
+td{
+    display: inline-block;
+    margin: 0.5px;
+    padding: 0px;
+    background-color: #fff;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#findPathbutton{
+    display: none;
+}
+
+#tempsAnimCells{
+    display: none;
+}
+
+.point_de_depart {background-color: crimson !important;}
+.point_de_depart:hover{background-color: rgb(219, 62, 93);}
+
+.point_d_arrive {background-color: lime !important;}
+.point_d_arrive:hover{background-color: rgb(138, 255, 138);}
+
+.color_1, .color_1:hover{ background-color: crimson; color: white; }
+.color_2, .color_2:hover{ background-color: lime; }
+.color_3{ background-color: blueviolet; }
+.color_4{ background-color: orange; }
+
+.mobilebr{
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    .conteneur{
+        max-height: 600px;
+        max-width: 600px;
+        width: 90%;
+        height: 90vh;
+    }
+    .mobilebr{
+        display: initial;
+    }
+}

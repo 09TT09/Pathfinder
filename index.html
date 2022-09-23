@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <title>Pathfinder</title>
@@ -9,7 +9,7 @@
     
     <body>
         <header id="header">
-            <input type="number" value="5" min="1" max="25" step="1" class="header_number" id="gridArea">
+            <input type="number" value="20" min="1" max="20" step="1" class="header_number" id="gridArea">
             <input type="button" value="Créer une grille" class="header_button" id="gridCreate">
             <span class="header_hidden_buttons" id="headerHiddenButtons">
                 <input type="button" value="Point de départ" class="header_button" id="startPoint"><!--
@@ -17,8 +17,26 @@
                 --><input type="button" value="Trouver le chemin" class="header_button" id="findPath"><!--
                 --><input type="button" value="Statistiques" class="header_button" id="showStats">
             </span>
-            <input type="button" class="header_params">
+            <input type="button" class="header_params" id="params">
         </header>
+
+        <div id="divparams">
+            <button id="exitparams">✖</button>
+            <div class="container">
+                <div class="title">
+                    <p>Paramètres</p>
+                </div>
+                <div class="allparams">
+                    <p>Chemin automatique : <input type="checkbox" id="autoPath" checked></p>
+                    <p>Algorithme de pathfinding : <span style="color: lime">◼</span></p>
+                    <p>Ajouter des "murs" : <span style="color: lime">◼</span></p>
+                    <p>Temps d'animation des cellules par zones : <input type="number" min="0" value="5" class="surface_input" id="msConfig"> millisecondes</p>
+                    <p>Surface maximum du tableau<span style="color:crimson"><b>*</b></span> : <input type="number" min="20" value=20 class="surface_input" id="surfaceHeight"> x <span id="surfaceWidth">20</span> = <span id="surface">400</span> cases</p>
+                    <span class="dev"><b>Les paramètres avec ce symbole " <span style="font-size: initial; color: lime">◼</span> " sont en cours de développement.</b></span><br>
+                    <span class="attention"><b>Les paramètres avec ce symbole " <span style="font-size: initial;">*</span> " peuvent engendrer des problèmes !</b></span>
+                </div>
+            </div>
+        </div>
 
         <div class="content" id="content"></div>
         <div class="hidden_container" id="hiddenContainer">

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pathfinder</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    
+    <body>
+        <header id="header">
+            <input type="number" value="5" min="1" max="25" step="1" class="header_number" id="gridArea">
+            <input type="button" value="Créer une grille" class="header_button" id="gridCreate">
+            <span class="header_hidden_buttons" id="headerHiddenButtons">
+                <input type="button" value="Point de départ" class="header_button" id="startPoint"><!--
+                --><input type="button" value="Point d'arrivé" class="header_button" id="endPoint"><!--
+                --><input type="button" value="Trouver le chemin" class="header_button" id="findPath"><!--
+                --><input type="button" value="Statistiques" class="header_button" id="showStats">
+            </span>
+            <input type="button" class="header_params">
+        </header>
+
+        <div class="content" id="content"></div>
+        <div class="hidden_container" id="hiddenContainer">
+            <div class="alert_box" id="alertBox">
+                <div class="error_banner">
+                    <div class="close_error" id="closeError">X</div><!--
+                    --><div class="title_error">Erreur</div><!--
+                    --><div class="content_error" id="contentError">Message</div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+</html>

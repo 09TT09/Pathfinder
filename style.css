@@ -1,0 +1,270 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #2d2d2d;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+/*
+*{
+ -moz-user-select: none; Firefox
+ -webkit-user-select: none; Chrome, Safari, Opéra depuis la version 15
+ -ms-user-select: none; Internet explorer depuis la version 10 et Edge
+ user-select: none; Propriété standard
+}
+*/
+
+
+
+
+
+
+
+
+
+/* HEADER DEBUT */
+header{
+    display: flex;
+    align-items: center;
+    background-color: #1b1b1b;
+    width: calc(100% - 40px);
+    height: 60px;
+    padding: 0 20px 0 20px;
+    z-index: 5;
+}
+
+.header_number{
+    width: 56px;
+    height: 26px;
+    border: 0;
+    text-align: center;
+    transition: 0.25s;
+    border: solid white 2px;
+    margin: 0 5px 0 5px;
+}
+
+.header_number:hover{
+    border-color: orange;
+}
+
+.header_button{
+    width: 120px;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.25s;
+    margin: 0 5px 0 5px;
+}
+
+.header_button:hover{
+    background-color: orange;
+    transform: scale(1.05, 1.05);
+}
+
+.header_params{
+    background-image: url("images/engrenage-illustrator.svg");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 0;
+    transition: 0.25s;
+    margin: 0 5px 0 5px;
+}
+
+.header_params:hover{
+    background-image: url("images/engrenage-illustrator-orange.svg");
+}
+
+.header_hidden_buttons{ display:none; }
+/* HEADER FIN */
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTENT DEBUT */
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+.grid td{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cell_stats{
+    width: 100%;
+    height: 100%;
+}
+
+.cell_stats_display_block{display: block;}
+.cell_stats_display_none{display: none;}
+
+.cell_stats_top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    font-size: 14px;
+    color: #ffca00;
+    text-shadow: black 0.5px 0.5px 0.5px;
+}
+
+.cell_stats_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10px;
+    font-size: 9px;
+}
+
+.cell_stats_bottom div{
+    width: 50%;
+    height: 10px;
+    text-align: center;
+    background-color: black;
+}
+
+.cell_stats_left{color: crimson;}
+.cell_stats_right{color: lime;}
+/* CONTENT FIN */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HIDDENCONTAINER DEBUT */
+.hidden_container{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.alert_box{
+    position: relative;
+    display: none;
+    width: 30%;
+    height: 40vh;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.error_banner{
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(90deg, crimson, orange);
+}
+
+.close_error{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 39px;
+    height: 39px;
+    border-right: solid black 1px;
+    border-bottom: solid black 1px;
+    background-color: white;
+    color: crimson;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.close_error:hover{
+    background-color: crimson;
+    color: white;
+}
+
+.title_error{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    width: calc(100% - 40px);
+    height: 100%;
+    font-size: 20px;
+    color: white;
+    text-shadow: black 1px 1px 1px;
+}
+
+.content_error{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: calc(100% - 40px);
+    font-size: 16px;
+}
+/* HIDDENCONTAINER FIN */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE DEBUT */
+@media screen and (max-width: 900px) {
+}
+/* RESPONSIVE FIN */
